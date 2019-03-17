@@ -1,15 +1,14 @@
-package com.example.duanzi;
+package com.eassyjoke.app.activity;
 
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.base.BaseSkinActivity;
-import com.example.dialog.AlertDialog;
-import com.example.dialog.AlertDialog.Builder;
-import com.example.ioc.OnClick;
-import com.example.ioc.ViewById;
+import com.eassyjoke.base.dialog.AlertDialog;
+import com.eassyjoke.base.dialog.AlertDialog.Builder;
+import com.eassyjoke.base.ioc.OnClick;
+import com.eassyjoke.base.ioc.ViewById;
+import com.eassyjoke.framework.activity.BaseSkinActivity;
+import com.example.duanzi.R;
 
 public class MainActivity extends BaseSkinActivity {
 	@ViewById(R.id.btn_hello)
@@ -23,16 +22,6 @@ public class MainActivity extends BaseSkinActivity {
 		final AlertDialog dialog = mBuilder
 				.setContentView(R.layout.dialog_comment).fromBottom(true)
 				.full(true).show();
-
-		dialog.setClickListener(R.id.btn_send, new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				TextView view = (TextView) dialog.getView(R.id.et_comment);
-				Toast.makeText(MainActivity.this, view.getText().toString(),
-						Toast.LENGTH_SHORT).show();
-			}
-		});
 
 	}
 

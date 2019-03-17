@@ -1,4 +1,4 @@
-package com.example.ioc;
+package com.eassyjoke.base.ioc;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

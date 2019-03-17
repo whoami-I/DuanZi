@@ -1,9 +1,9 @@
-package com.example.base;
+package com.eassyjoke.base.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.example.ioc.ViewUtils;
+import com.eassyjoke.base.ioc.ViewUtils;
 
 public abstract class BaseActivity extends Activity {
 	@Override

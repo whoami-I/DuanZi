@@ -1,4 +1,4 @@
-package com.example.base;
+package com.eassyjoke.base.crashhandle;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 

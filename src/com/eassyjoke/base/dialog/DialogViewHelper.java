@@ -1,4 +1,4 @@
-package com.example.dialog;
+package com.eassyjoke.base.dialog;
 
 import android.content.Context;
 import android.view.View;

@@ -1,4 +1,4 @@
-package com.example.ioc;
+package com.eassyjoke.base.ioc;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
