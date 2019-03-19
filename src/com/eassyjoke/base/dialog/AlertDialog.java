@@ -5,7 +5,7 @@ import android.content.Context;
 import android.view.ContextThemeWrapper;
 import android.view.View;
 
-import com.example.duanzi.R;
+import com.eassyjoke.R;
 
 public class AlertDialog extends Dialog {
 

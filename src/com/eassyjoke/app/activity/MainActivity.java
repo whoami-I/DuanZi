@@ -1,11 +1,14 @@
 package com.eassyjoke.app.activity;
 
+import android.graphics.Color;
+import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
+import com.eassyjoke.R;
 import com.eassyjoke.base.ioc.ViewById;
 import com.eassyjoke.framework.activity.BaseSkinActivity;
 import com.eassyjoke.framework.navigationbar.NavigationBar;
-import com.example.duanzi.R;
 
 public class MainActivity extends BaseSkinActivity {
 	@ViewById(R.id.btn_hello)
@@ -35,8 +38,19 @@ public class MainActivity extends BaseSkinActivity {
 
 	@Override
 	protected void initTitle() {
-		NavigationBar builder = new NavigationBar.Builder(this).setContentView(
-				R.layout.title).show();
+		View.OnClickListener l = new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(MainActivity.this, "µã»÷", Toast.LENGTH_SHORT)
+						.show();
+			}
+		};
+		NavigationBar builder = new NavigationBar.Builder(this)
+				.setContentView(R.layout.title).setLeftIcon(R.drawable.qq)
+				.setTitle("±êÌâÀ¸").setHeight(200).setTextSize(30)
+				.setBackGround(Color.rgb(200, 200, 200))
+				.setLeftClickListener(l).show();
 	}
 
 	@Override
