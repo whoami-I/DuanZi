@@ -6,6 +6,9 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.eassyjoke.R;
+import com.eassyjoke.base.dialog.AlertDialog;
+import com.eassyjoke.base.dialog.AlertDialog.Builder;
+import com.eassyjoke.base.ioc.OnClick;
 import com.eassyjoke.base.ioc.ViewById;
 import com.eassyjoke.framework.activity.BaseSkinActivity;
 import com.eassyjoke.framework.navigationbar.NavigationBar;
@@ -14,17 +17,17 @@ public class MainActivity extends BaseSkinActivity {
 	@ViewById(R.id.btn_hello)
 	private Button mBtnHello;
 
-	// private Builder mBuilder;
+	private Builder mBuilder;
 
-	// @OnClick(values = { R.id.btn_hello })
-	// private void btnHelloOnClick(View v) {
-	// mBuilder = new AlertDialog.Builder(this);
-	//
-	// final AlertDialog dialog = mBuilder
-	// .setContentView(R.layout.dialog_comment).fromBottom(true)
-	// .full(true).show();
-	//
-	// }
+	@OnClick(values = { R.id.btn_hello })
+	private void btnHelloOnClick(View v) {
+		mBuilder = new AlertDialog.Builder(this);
+
+		final AlertDialog dialog = mBuilder
+				.setContentView(R.layout.dialog_comment).fromBottom(true)
+				.setAnimation(R.style.anim_left_in).full(true).show();
+
+	}
 
 	@Override
 	protected void initData() {

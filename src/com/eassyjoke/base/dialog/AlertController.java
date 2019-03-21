@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager.LayoutParams;
 
+import com.eassyjoke.R;
+
 class AlertController {
 	private AlertDialog mAlertDialog;
 	private Window mWindow;
@@ -63,7 +65,10 @@ class AlertController {
 
 		public SparseArray<CharSequence> mTextMap = new SparseArray<CharSequence>();
 		public SparseArray<View.OnClickListener> mListenerMap = new SparseArray<View.OnClickListener>();
-		public int mAnimation;
+		/**
+		 * diaolog弹出的效果，默认为从底部弹出、消失
+		 */
+		public int mAnimation = R.style.anim_bottom_in;
 
 		public AlertParams(Context context) {
 			mContext = context;
@@ -109,9 +114,11 @@ class AlertController {
 			if (mFromBottom) {
 				window.setGravity(Gravity.BOTTOM);
 			}
+
 			if (mAnimation != 0) {
 				window.setWindowAnimations(mAnimation);
 			}
+
 		}
 	}
 
